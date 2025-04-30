@@ -1,0 +1,12 @@
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+# Copy all Java files
+COPY *.java ./
+
+# Compile all Java files
+RUN javac *.java
+
+# Run the Main class
+CMD ["java", "Main"]
